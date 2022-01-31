@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <title>To do App - Vue js</title>
+</head>
+
+<body>
+    
+    <div class="container" id="app">
+        
+        <form v-on:submit.prevent="toDo">
+            <input v-model="newItem" type="text" class="form-control">
+            <button class="new-task">
+                <span class="btn-add"><img src="images/plus.svg" alt="..."></span>
+                <span class="h4">Add New Task</span>
+            </button> 
+        </form> 
+        <ul class="list" v-for="item in todoList">
+            <li>
+                <a v-on:click="remove(item)" href="#"><img src="images/trash.svg" alt="..."></a>
+                <label class="form-check">
+                    <input type="checkbox" v-model="item.done">
+                    <span class="text">{{ item.title }}</span>
+                    <span class="checkmark"></span>
+                </label>
+            </li>
+           
+        </ul>
+        <button v-on:click="allDone" class="new-task">
+            <span class="btn-add"><img src="images/tick.svg" alt="..."></span>
+            <span class="h4">All Done</span>
+        </button> 
+    </div>
+
+
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
