@@ -1,0 +1,125 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.btn-add {
+    width: 30px;
+    height: 30px;
+    background-color: #B47AEA;
+    border-radius: 50%;
+    border: 0;
+    margin-right: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-task {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 27px;
+    border: 0;
+    background-color: transparent;
+}
+
+.new-task .h4 {
+    color: #B47AEA;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: 25px;
+}
+
+.form-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form-check .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #FFFFFF;
+    border: 2px solid #1E9CEA;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.form-check input:checked~.checkmark {
+    background-color: #2196F3;
+}
+.form-check input:checked~.text {
+    text-decoration: line-through;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.form-check input:checked~.checkmark:after {
+    display: block;
+}
+
+.form-check .checkmark:after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url(../../images/tick.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-check .text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+}
+
+ul.list>li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+}
+
+ul.list>li>a {
+    display: block;
+    font-size: 0;
+}
+
+ul.list>li>label {
+    margin-left: 21px;
+}
+[type="text"].form-control {
+    margin-bottom: 27px;
+    border: 2px solid #1E9CEA;
+    border-radius: 4px;
+    height: 28px;
+    display: block;
+    min-width: 320px;
+}
